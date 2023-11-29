@@ -100,3 +100,35 @@ for (let i = 0; i <= CSV_Str.length; i++) {
             continue;
     }
   }
+
+  
+console.log("---------Testing The code of Part 3 ------------")
+  let Test_Str = "Index,Mass (kg),Spring 1 (m),Spring 2 (m)\n1,0.00,0.050,0.050\n2,0.49,0.066,0.066\n3,0.98,0.087,0.080\n4,1.47,0.116,0.108\n5,1.96,0.142,0.138\n6,2.45,0.166,0.158\n7,2.94,0.193,0.174\n8,3.43,0.204,0.192\n9,3.92,0.226,0.205\n10,4.41,0.238,0.232";
+  
+  for (let i = 0; i <= Test_Str.length; i++) {
+    if (Test_Str[i] === "\n" || i===Test_Str.length) {
+      Cell4 = word; 
+      console.log(Cell1, Cell2, Cell3, Cell4);
+      word = ""; 
+      Cell1 = "";
+      Cell2 = ""; 
+      Cell3 = "";
+      Cell4 = "";
+      continue;
+    }
+    if (Test_Str[i] != ",") {
+        word += Test_Str[i];
+      } else if(Cell1 ===""){
+              Cell1 = word; 
+              word = ""; 
+              continue;
+      }else if(Cell2 ===""){
+              Cell2 = word; 
+              word = ""; 
+              continue;
+      } else if(Cell3 ===""){
+              Cell3 = word; 
+              word = ""; 
+              continue;
+      }
+    }
